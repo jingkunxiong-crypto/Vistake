@@ -13,6 +13,7 @@ import androidx.compose.ui.res.painterResource
 import kotlinx.coroutines.delay
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
+import androidx.activity.compose.BackHandler
 import androidx.activity.compose.rememberLauncherForActivityResult
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.compose.foundation.*
@@ -59,6 +60,7 @@ class MainActivity:ComponentActivity() { private val incomingLink = mutableState
  fun save() { val temp=File(context.filesDir,"spots.tmp"); temp.writeText(JSONArray(spots.map { it.json() }).toString()); if (!temp.renameTo(file)) { file.writeText(temp.readText()); temp.delete() } }
  var screen by remember { mutableStateOf("home") }; var selected by remember { mutableStateOf<String?>(null) }; var editing by remember { mutableStateOf<Spot?>(null) }; var query by remember { mutableStateOf("") }; var filter by remember { mutableStateOf("全部") }; var favorites by remember { mutableStateOf(false) }
  val current=spots.firstOrNull { it.id==selected }
+ BackHandler(enabled=screen != "home") { when(screen) { "edit" -> screen=if(selected!=null && editing!=null) "detail" else "home"; "detail" -> {selected=null;screen="home"} } }
  var showImport by remember { mutableStateOf(false) }
  var importText by remember { mutableStateOf("") }
  var importError by remember { mutableStateOf("") }

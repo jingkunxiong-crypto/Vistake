@@ -2,7 +2,7 @@ plugins { alias(libs.plugins.android.application); alias(libs.plugins.kotlin.com
 android {
  namespace = "com.jiwei.collection"
  compileSdk = 37
- defaultConfig { applicationId = "com.jiwei.collection"; minSdk = 26; targetSdk = 36; versionCode = 1; versionName = "0.1.0" }
+ defaultConfig { applicationId = "com.jiwei.collection"; minSdk = 26; targetSdk = 36; versionCode = 2; versionName = "1.0.0" }
  buildFeatures { compose = true }
  compileOptions { sourceCompatibility = JavaVersion.VERSION_11; targetCompatibility = JavaVersion.VERSION_11 }
 }

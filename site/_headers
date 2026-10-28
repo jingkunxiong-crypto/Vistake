@@ -1,0 +1,9 @@
+/*
+  X-Content-Type-Options: nosniff
+  Referrer-Policy: strict-origin-when-cross-origin
+  Cache-Control: public, max-age=0, must-revalidate
+
+/download/Vistake-1.0.0.apk
+  Content-Type: application/vnd.android.package-archive
+  Content-Disposition: attachment; filename="Vistake-1.0.0.apk"
+  Cache-Control: public, max-age=31536000, immutable

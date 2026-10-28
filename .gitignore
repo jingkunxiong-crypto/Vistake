@@ -10,3 +10,7 @@ local.properties
 .env
 .env.*
 .DS_Store
+
+.taste-skill/
+site/download/*.apk
+artifacts/

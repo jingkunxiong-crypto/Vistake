@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://vistake.jacksakuya.com/sitemap.xml
